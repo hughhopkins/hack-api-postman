@@ -1,6 +1,6 @@
-openapi: "3.0.0"
+openapi: 3.0.0
 info:
-  version: 0.3.6
+  version: 0.3.7
   title: Messages API
   description: "The Messaging API is a new API that consolidates all messaging channels. It encapsulates a user (developer) from having to use multiple APIs to interact with our various channels such as SMS, MMS, Viber, Facebook Messenger, etc. The API normalises information across all channels to abstracted to, from and content. This API is currently in Beta."
   contact:
@@ -9,7 +9,7 @@ info:
     url: "https://developer.nexmo.com/"
   x-label: Beta
 servers:
-  - url: https://api.nexmo.com/v0.1/messages
+  - url: "https://api.nexmo.com/v0.1/messages"
 paths:
   /:
     post:
@@ -460,21 +460,21 @@ components:
                 - update
                 - message_tag
             tag:
-              description: ‘A full list of the possible tags is available on [developers.facebook.com](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags)"
+              description: A full list of the possible tags is available on [developers.facebook.com](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags)"
               type: string
               example: "ticket_update"
         whatsapp:
           type: object
           properties:
             policy:
-              description: "Please note that WhatsApp will deprecate `fallback` policy in January 2020. There are two policies that you can specify when sending a Message Template: `deterministic` and `fallback`. `deterministic` — Deliver the Message Template in exactly the language and locale asked for. `fallback` — Deliver the Message Template in the language that matches users language/locale setting on device. If one can not be found, deliver using the specified fallback language."
+              description: "Please note that WhatsApp will deprecate `fallback` policy in January 2020. There are two policies that you can specify when sending a Message Template: `deterministic` and `fallback`. `deterministic`  Deliver the Message Template in exactly the language and locale asked for. `fallback`  Deliver the Message Template in the language that matches users language/locale setting on device. If one can not be found, deliver using the specified fallback language."
               type: string
               example: "deterministic"
               enum:
                 - fallback
                 - deterministic
             locale:
-              description: "We are using the industry standard, BCP 47, for locales. So in your API call to the /messages API you will need to put “en-GB” and this will refer to the “en_GB” template for WhatsApp. A full list of the possible locales is available on [developers.facebook.com](https://developers.facebook.com/docs/whatsapp/message-templates/creation#translations)."
+              description: "We are using the industry standard, BCP 47, for locales. So in your API call to the /messages API you will need to put en-GB and this will refer to the en_GB template for WhatsApp. A full list of the possible locales is available on [developers.facebook.com](https://developers.facebook.com/docs/whatsapp/message-templates/creation#translations)."
               type: string
               example: "en-GB"
 
@@ -706,7 +706,7 @@ x-errors:
     description: Number Blocked by Carrier  -  The carrier blocked this message. This could be due to several reasons. For example, to"s plan does not include SMS or the account is suspended.
 
   "1290":
-    description: Pre-Paid - Insufficient funds  -  to’s pre-paid account does not have enough credit to receive the message.
+    description: Pre-Paid - Insufficient funds  -  tos pre-paid account does not have enough credit to receive the message.
 
   "1300":
     description: Not part of the provider network  -  The number or ID is not a user in the provider network.
