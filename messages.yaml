@@ -167,11 +167,11 @@ components:
             code:
               type: integer
               example: 1300
-              description: The error code. See [our errors list](https://developer.nexmo.com/api-errors/messages-olympus) for a list of possible errors
+              description: "The error code. See [our errors list](https://developer.nexmo.com/api-errors/messages-olympus) for a list of possible errors)"
             reason:
               type: string
               example: "Not part of the provider network"
-              description: Text describing the error. See [our errors list](https://developer.nexmo.com/api-errors/messages-olympus) for a list of possible errors
+              description: "Text describing the error. See [our errors list](https://developer.nexmo.com/api-errors/messages-olympus) for a list of possible errors)"
         usage:
           type: object
           properties:
@@ -229,7 +229,7 @@ components:
               example: "447700900000"
               description: |
                 **WhatsApp** or **MMS**: 
-                The phone number of the message recipient in the [E.164](https://en.wikipedia.org/wiki/E.164) format.
+                The phone number of the message recipient in the [E.164](https://en.wikipedia.org/wiki/E.164) format.)
         from:
           type: object
           required:
@@ -255,7 +255,7 @@ components:
               example: "447700900000"
               description: |
                 **WhatsApp** or **MMS** or **Viber**:
-                The phone number of the message sender in the [E.164](https://en.wikipedia.org/wiki/E.164) format.
+                The phone number of the message sender in the [E.164](https://en.wikipedia.org/wiki/E.164) format.)
         timestamp:
           type: string
           format: ISO 8601
@@ -326,7 +326,7 @@ components:
           example: "447700900000"
           description: |
            **SMS**, **Viber**, **WhatsApp** or **MMS**: 
-           The phone number of the message recipient in the [E.164](https://en.wikipedia.org/wiki/E.164) format. Don"t use a leading + or 00 when entering a phone number, start with the country code, for example, 447700900000.
+           The phone number of the message recipient in the [E.164](https://en.wikipedia.org/wiki/E.164) format. Don"t use a leading + or 00 when entering a phone number, start with the country code, for example, 447700900000.)
     FromProperty:
       type: object
       required:
@@ -360,7 +360,7 @@ components:
           maxLength: 50
           example: "447700900000"
           description: |
-            **SMS**: The phone number of the message recipient in the [E.164](https://en.wikipedia.org/wiki/E.164) format. Don"t use a leading + or 00 when entering a phone number, start with the country code, for example, 447700900000.
+            **SMS**: The phone number of the message recipient in the [E.164](https://en.wikipedia.org/wiki/E.164) format. Don"t use a leading + or 00 when entering a phone number, start with the country code, for example, 447700900000.)
 
             **WhatsApp**: This is your WhatsApp Business Number  given to you by Nexmo Account Manager. To find out more please visit [nexmo.com/products/messages](https://www.nexmo.com/products/messages).
 
@@ -467,14 +467,14 @@ components:
           type: object
           properties:
             policy:
-              description: "Please note that WhatsApp will deprecate `fallback` policy in January 2020. There are two policies that you can specify when sending a Message Template: `deterministic` and `fallback`. `deterministic`  Deliver the Message Template in exactly the language and locale asked for. `fallback`  Deliver the Message Template in the language that matches users language/locale setting on device. If one can not be found, deliver using the specified fallback language."
+              description: "Please note that WhatsApp will deprecate `fallback` policy in January 2020. There are two policies that you can specify when sending a Message Template: `deterministic` and `fallback`. `deterministic`. Deliver the Message Template in exactly the language and locale asked for. `fallback` Deliver the Message Template in the language that matches users language/locale setting on device. If one can not be found, deliver using the specified fallback language."
               type: string
               example: "deterministic"
               enum:
                 - fallback
                 - deterministic
             locale:
-              description: "We are using the industry standard, BCP 47, for locales. So in your API call to the /messages API you will need to put en-GB and this will refer to the en_GB template for WhatsApp. A full list of the possible locales is available on [developers.facebook.com](https://developers.facebook.com/docs/whatsapp/message-templates/creation#translations)."
+              description: "We are using the industry standard, BCP 47, for locales. So in your API call to the /messages API you will need to put en-GB and this will refer to the en_GB template for WhatsApp. A full list of the possible locales is available on [developers.facebook.com](https://developers.facebook.com/docs/whatsapp/message-templates/creation#translations)."
               type: string
               example: "en-GB"
 
@@ -706,7 +706,7 @@ x-errors:
     description: Number Blocked by Carrier  -  The carrier blocked this message. This could be due to several reasons. For example, to"s plan does not include SMS or the account is suspended.
 
   "1290":
-    description: Pre-Paid - Insufficient funds  -  tos pre-paid account does not have enough credit to receive the message.
+    description: Pre-Paid - Insufficient funds  -  to s pre-paid account does not have enough credit to receive the message.
 
   "1300":
     description: Not part of the provider network  -  The number or ID is not a user in the provider network.
